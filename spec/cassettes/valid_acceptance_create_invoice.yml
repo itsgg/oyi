@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-stg.oyindonesia.com//api/payment-checkout/create-invoice
+    body:
+      encoding: UTF-8
+      string: '{"partner_tx_id":"d3d76891-9289-4163-b4ac-2e99a2d2d2a1","amount":15000,"email":"user@example.com"}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rest-client/2.1.0 (darwin20.1.0 x86_64) ruby/2.6.6p146
+      Content-Type:
+      - application/json
+      X-Oy-Username:
+      - xxx
+      X-Api-Key:
+      - xxx
+      Content-Length:
+      - '98'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api-stg.oyindonesia.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Dec 2020 21:45:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - sameorigin
+      Access-Control-Allow-Headers:
+      - X-Requested-by,Accept-encoding,X-Oy-Authorization,X-Oy-Username,X-Api-Key,DNT,Accept-Language,Content-Length,Host,Origin,Referer,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range
+    body:
+      encoding: ASCII-8BIT
+      string: '{"payment_link_id":"a888254e-604d-43cb-93bd-5a4ee8e284b8","message":"success","email_status":"PROCESSED","url":"https://pay-stg.oyindonesia.com/invoice/a888254e-604d-43cb-93bd-5a4ee8e284b8","status":true}'
+    http_version: null
+  recorded_at: Wed, 09 Dec 2020 21:45:05 GMT
+recorded_with: VCR 5.1.0

@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-stg.oyindonesia.com//api/static-virtual-accountt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rest-client/2.1.0 (darwin20.1.0 x86_64) ruby/2.6.6p146
+      Content-Type:
+      - application/json
+      X-Oy-Username:
+      - xxx
+      X-Api-Key:
+      - xxx
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api-stg.oyindonesia.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 09 Dec 2020 22:31:54 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - sameorigin
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status_code":404,"success":false,"error":{"code":404,"message":"Resource
+        not found"},"data":"Resource not found"}'
+    http_version: null
+  recorded_at: Wed, 09 Dec 2020 22:31:54 GMT
+- request:
+    method: get
+    uri: https://api-stg.oyindonesia.com//api/static-virtual-account
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rest-client/2.1.0 (darwin20.1.0 x86_64) ruby/2.6.6p146
+      Content-Type:
+      - application/json
+      X-Oy-Username:
+      - xxx
+      X-Api-Key:
+      - xxx
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api-stg.oyindonesia.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Dec 2020 22:32:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - sameorigin
+      Access-Control-Allow-Headers:
+      - X-Requested-by,Accept-encoding,X-Oy-Authorization,X-Oy-Username,X-Api-Key,DNT,Accept-Language,Content-Length,Host,Origin,Referer,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range
+    body:
+      encoding: ASCII-8BIT
+      string: '{"total":15,"data":[{"id":"623c6167-7658-4271-8442-1ebb5b7dddb2","amount":30000.0000,"va_number":"100536000000003116","bank_code":"002","bank_name":"BRI","is_open":true,"is_single_use":true,"expiration_time":-1,"va_status":"WAITING_PAYMENT","username_display":"xxx","amount_detected":0,"partner_user_id":"a8677523-633f-4012-b485-ac96e5c2d6d4","created":1607552961175,"counter_incoming_payment":0,"trx_expiration_time":1607639361000,"trx_counter":0},{"id":"e92b15ed-7d0c-46b1-8424-19e717a34ef1","amount":30000.0000,"va_number":"100536000000003115","bank_code":"002","bank_name":"BRI","is_open":true,"is_single_use":true,"expiration_time":-1,"va_status":"WAITING_PAYMENT","username_display":"xxx","amount_detected":0,"partner_user_id":"f86d562b-5dc9-4273-99f5-c5816a8497f4","created":1607552897602,"counter_incoming_payment":0,"trx_expiration_time":1607639297000,"trx_counter":0},{"id":"5e2c39f5-7d7d-494a-b206-7ed996255cca","amount":30000.0000,"va_number":"100536000000003114","bank_code":"002","bank_name":"BRI","is_open":true,"is_single_use":false,"expiration_time":1607639218000,"va_status":"WAITING_PAYMENT","username_display":"xxx","amount_detected":0,"partner_user_id":"4475bd77-1a93-4872-ba28-0a15084f2e2c","created":1607552818556,"counter_incoming_payment":0,"trx_expiration_time":1607639218000,"partner_trx_id":"84776d0a-b249-4169-81eb-146e64d02b54","trx_counter":0},{"id":"95ce69c3-7865-4b20-8710-0ec33f3967b6","amount":30000.0000,"va_number":"100536000000003113","bank_code":"002","bank_name":"BRI","is_open":true,"is_single_use":false,"expiration_time":1607639182000,"va_status":"WAITING_PAYMENT","username_display":"xxx","amount_detected":0,"partner_user_id":"2a0f57e1-da30-436f-b2b1-c680ddcd9f11","created":1607552782591,"counter_incoming_payment":0,"trx_expiration_time":1607639182000,"partner_trx_id":"b0baaf2d-a042-4acb-9ed3-dd623e3675c3","trx_counter":0},{"id":"508b227b-b10e-4c5f-821c-239dbd54b333","amount":1000000.0000,"va_number":"8932560000000079","bank_code":"008","bank_name":"BANK
+        MANDIRI","is_open":true,"is_single_use":false,"expiration_time":1607639141000,"va_status":"WAITING_PAYMENT","username_display":"xxx","amount_detected":0,"partner_user_id":"U-1232342343433456","created":1607552741958,"counter_incoming_payment":0,"trx_expiration_time":1607639141000,"trx_counter":0},{"id":"8cb94781-17fc-4df6-bb11-c446f9c6f66d","amount":30000.0000,"va_number":"100536000000003112","bank_code":"002","bank_name":"BRI","is_open":true,"is_single_use":false,"expiration_time":1607639050000,"va_status":"WAITING_PAYMENT","username_display":"xxx","amount_detected":0,"partner_user_id":"dd293474-87ab-4e8d-8261-d8ada69b12ba","created":1607552650546,"counter_incoming_payment":0,"trx_expiration_time":1607639050000,"partner_trx_id":"dfdbee53-cd1a-4834-8a45-cf73c11f03db","trx_counter":0},{"id":"555eb6c6-5336-4936-ba80-a16e4be61ca6","amount":1000000.0000,"va_number":"8932560000000078","bank_code":"008","bank_name":"BANK
+        MANDIRI","is_open":true,"is_single_use":false,"expiration_time":1607638924000,"va_status":"WAITING_PAYMENT","username_display":"xxx","amount_detected":0,"partner_user_id":"U-1232343433456","created":1607552524423,"counter_incoming_payment":0,"trx_expiration_time":1607638924000,"trx_counter":0},{"id":"79bb35e8-5d4a-425f-8d9e-309151dfca20","amount":1000000.0000,"va_number":"8932560000000077","bank_code":"008","bank_name":"BANK
+        MANDIRI","is_open":true,"is_single_use":false,"expiration_time":1607638802000,"va_status":"WAITING_PAYMENT","username_display":"xxx","amount_detected":0,"partner_user_id":"U-12333456","created":1607552402706,"counter_incoming_payment":0,"trx_expiration_time":1607638802000,"partner_trx_id":"CV-1234","trx_counter":0},{"id":"fa764653-5672-4bbf-8ba2-99568fb270f8","amount":30000.0000,"va_number":"100536000000003111","bank_code":"002","bank_name":"BRI","is_open":true,"is_single_use":false,"expiration_time":1607638768000,"va_status":"WAITING_PAYMENT","username_display":"xxx","amount_detected":0,"partner_user_id":"e83c0ece-650b-44f4-a5c4-4c63f13c347c","created":1607552368970,"counter_incoming_payment":0,"trx_expiration_time":1607638768000,"partner_trx_id":"bdf184ef-fda0-476c-98f5-a6a82f9ccff1","trx_counter":0},{"id":"e6b5b517-d396-4884-815f-aeb689c9657b","amount":30000.0000,"va_number":"9880028460000057","bank_code":"009","bank_name":"BNI","is_open":true,"is_single_use":false,"expiration_time":1607638601000,"va_status":"WAITING_PAYMENT","username_display":"xxx","amount_detected":0,"partner_user_id":"5a1cb466-a0b7-4e2b-9f3b-8298d382cb39","created":1607552201393,"counter_incoming_payment":0,"trx_expiration_time":1607638601000,"partner_trx_id":"e33b9c06-9232-49b7-8144-a993b7477458","trx_counter":0}],"status":{"code":"000","message":"Success"}}'
+    http_version: null
+  recorded_at: Wed, 09 Dec 2020 22:32:27 GMT
+recorded_with: VCR 5.1.0

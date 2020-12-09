@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-stg.oyindonesia.com//api/remit
+    body:
+      encoding: UTF-8
+      string: '{"recipient_bank":"999","recipient_account":"23432423423432434","amount":200000,"partner_trx_id":"96f480f3-d23e-4f85-8de3-bf3e6a8ec844"}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rest-client/2.1.0 (darwin20.1.0 x86_64) ruby/2.6.6p146
+      Content-Type:
+      - application/json
+      X-Oy-Username:
+      - xxx
+      X-Api-Key:
+      - xxx
+      Content-Length:
+      - '136'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api-stg.oyindonesia.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Dec 2020 21:45:12 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - sameorigin
+      Access-Control-Allow-Headers:
+      - X-Requested-by,Accept-encoding,X-Oy-Authorization,X-Oy-Username,X-Api-Key,DNT,Accept-Language,Content-Length,Host,Origin,Referer,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":{"code":"205","message":"Bank Code is not found"},"amount":200000,"timestamp":"09-12-2020
+        21:45:12","recipient_bank":"999","recipient_account":"23432423423432434","trx_id":"","partner_trx_id":"96f480f3-d23e-4f85-8de3-bf3e6a8ec844"}'
+    http_version: null
+  recorded_at: Wed, 09 Dec 2020 21:45:12 GMT
+recorded_with: VCR 5.1.0

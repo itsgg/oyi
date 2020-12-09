@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-stg.oyindonesia.com//api/scheduled-remit
+    body:
+      encoding: UTF-8
+      string: '{"recipient_bank":"008","recipient_account":"23432423423432434","amount":200000,"partner_trx_id":"626bfb2d-ca2c-403c-afe4-853ef495beb3","schedule_date":"12-12-2010"}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rest-client/2.1.0 (darwin20.1.0 x86_64) ruby/2.6.6p146
+      Content-Type:
+      - application/json
+      X-Oy-Username:
+      - xxx
+      X-Api-Key:
+      - xxx
+      Content-Length:
+      - '165'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api-stg.oyindonesia.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Dec 2020 21:45:13 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - sameorigin
+      Access-Control-Allow-Headers:
+      - X-Requested-by,Accept-encoding,X-Oy-Authorization,X-Oy-Username,X-Api-Key,DNT,Accept-Language,Content-Length,Host,Origin,Referer,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":{"code":"990","message":"Invalid date 12-12-2010 should be
+        the same or later than the current date"},"recipient_bank":"008","recipient_account":"23432423423432434","amount":200000,"scheduled_trx_id":"","partner_trx_id":"626bfb2d-ca2c-403c-afe4-853ef495beb3","scheduled_trx_status":null,"schedule_date":"12-12-2010","is_trigger_based":false,"trigger_date":null,"trigger_email":null,"timestamp":"09-12-2020
+        21:45:13"}'
+    http_version: null
+  recorded_at: Wed, 09 Dec 2020 21:45:13 GMT
+recorded_with: VCR 5.1.0

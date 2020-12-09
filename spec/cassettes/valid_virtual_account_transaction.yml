@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-stg.oyindonesia.com//api/generate-static-va
+    body:
+      encoding: UTF-8
+      string: '{"partner_user_id":"a55c36e7-dc96-45a0-bd8e-e23513c8134b","bank_code":"002","amount":30000,"partner_trx_id":"49fd4841-0fef-4d41-8479-1cfb6d684335"}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rest-client/2.1.0 (darwin20.1.0 x86_64) ruby/2.6.6p146
+      Content-Type:
+      - application/json
+      X-Oy-Username:
+      - xxx
+      X-Api-Key:
+      - xxx
+      Content-Length:
+      - '147'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api-stg.oyindonesia.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Dec 2020 22:35:19 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - sameorigin
+      Access-Control-Allow-Headers:
+      - X-Requested-by,Accept-encoding,X-Oy-Authorization,X-Oy-Username,X-Api-Key,DNT,Accept-Language,Content-Length,Host,Origin,Referer,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"5f4fba04-9545-4a1c-ac16-1686f93ddb6f","amount":30000,"status":{"code":"000","message":"Success"},"va_number":"100536000000003117","bank_code":"002","is_open":true,"is_single_use":false,"expiration_time":1607639719000,"va_status":"WAITING_PAYMENT","username_display":"xxx","partner_user_id":"a55c36e7-dc96-45a0-bd8e-e23513c8134b","counter_incoming_payment":0,"trx_expiration_time":1607639719000,"partner_trx_id":"49fd4841-0fef-4d41-8479-1cfb6d684335","trx_counter":-1}'
+    http_version: null
+  recorded_at: Wed, 09 Dec 2020 22:35:19 GMT
+- request:
+    method: get
+    uri: https://api-stg.oyindonesia.com//api/va-tx-history/5f4fba04-9545-4a1c-ac16-1686f93ddb6f
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rest-client/2.1.0 (darwin20.1.0 x86_64) ruby/2.6.6p146
+      Content-Type:
+      - application/json
+      X-Oy-Username:
+      - xxx
+      X-Api-Key:
+      - xxx
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api-stg.oyindonesia.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Dec 2020 22:35:19 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - sameorigin
+      Access-Control-Allow-Headers:
+      - X-Requested-by,Accept-encoding,X-Oy-Authorization,X-Oy-Username,X-Api-Key,DNT,Accept-Language,Content-Length,Host,Origin,Referer,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"5f4fba04-9545-4a1c-ac16-1686f93ddb6f","status":{"code":"000","message":"Success"},"data":[],"number_of_transaction":0,"total_incoming_payment":0}'
+    http_version: null
+  recorded_at: Wed, 09 Dec 2020 22:35:19 GMT
+recorded_with: VCR 5.1.0
