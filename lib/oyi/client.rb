@@ -25,33 +25,33 @@ module Oyi
                                                    'X-OY-Username': @api_username,
                                                    'X-Api-Key': @api_key
                                                  }
-          @code = response.code
+          @status = response.code
           @message = begin
                     JSON.parse(response.body)
                      rescue JSON::ParserError
                        response.body
                   end
         rescue RestClient::RequestFailed => e
-          @code = e.http_code
+          @status = e.http_code
           @message = e.message
         end
-        status = @message['status']
-        if @code == HTTP_OK_CODE
-          raise ApiError.new(message: @message['message']) if status == false
+        custom_status = @message['status']
+        if @status == HTTP_OK_CODE
+          raise ApiError.new(message: @message['message']) if custom_status == false
 
-          custom_error_code = status.is_a?(Hash) && status['code']
+          custom_error_code = custom_status.is_a?(Hash) && custom_status['code']
           if custom_error_code && !VALID_CODES.include?(custom_error_code)
-            raise ApiError.new(code: custom_error_code, message: @message)
+            raise ApiError.new(status: custom_error_code, message: @message['status']&.[]('message'))
           end
 
           return @message
         end
 
-        raise error_class(@code).new(code: @code, message: @message)
+        raise error_class(@status).new(status: @status, message: @message)
       end
 
-      def error_class(code)
-        case code
+      def error_class(status)
+        case status
         when HTTP_BAD_REQUEST_CODE
           BadRequestError
         when HTTP_UNAUTHORIZED_CODE

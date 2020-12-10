@@ -11,7 +11,7 @@ RSpec.describe Oyi::Acceptance do
   it '.payment_checkout throws an exception for invalid input' do
     VCR.use_cassette(:invalid_acceptance_payment_checkout) do
       expect do
-        partner_tx_id = SecureRandom.uuid
+        partner_tx_id = '7625e658-4d80-46a5-816e-233a3bb44d3a'
         Oyi::Acceptance.payment_checkout partner_tx_id: partner_tx_id, amount: 15_000, email: 'user@example.com'
         Oyi::Acceptance.payment_checkout partner_tx_id: partner_tx_id, amount: 15_000, email: 'user@example.com'
       end.to raise_error(Oyi::ApiError)

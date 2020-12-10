@@ -3,11 +3,15 @@
 module Oyi
   # Custom Error Classes
   class Error < StandardError
-    attr_accessor :code, :message
+    attr_accessor :status, :message
 
-    def initialize(code: nil, message:)
-      @code = code
+    def initialize(status: nil, message:)
+      @status = status
       @message = message
+    end
+
+    def type
+      self.class.name
     end
   end
 

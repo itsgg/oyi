@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    oyi (0.1.0)
+    oyi (0.1.1)
       rest-client
 
 GEM
