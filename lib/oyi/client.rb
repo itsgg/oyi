@@ -41,7 +41,7 @@ module Oyi
 
           custom_error_code = custom_status.is_a?(Hash) && custom_status['code']
           if custom_error_code && !VALID_CODES.include?(custom_error_code)
-            raise ApiError.new(status: custom_error_code, message: @message['status']&.[]('message'))
+            raise ApiError.new(message: @message['status']&.[]('message'))
           end
 
           return @message
